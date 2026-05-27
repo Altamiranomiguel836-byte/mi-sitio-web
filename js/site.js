@@ -112,6 +112,40 @@
     allRevealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
+  /* ——— Service cards: click / tap toggles overlay on touch devices ——— */
+  document.querySelectorAll('.service-card').forEach(function (card) {
+    /* Close all other active cards when one opens */
+    card.addEventListener('click', function () {
+      var isActive = card.classList.contains('is-active');
+      document.querySelectorAll('.service-card.is-active').forEach(function (c) {
+        c.classList.remove('is-active');
+        c.setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        card.classList.add('is-active');
+        card.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    /* Keyboard: Enter / Space triggers same as click */
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        card.click();
+      }
+    });
+  });
+
+  /* Clicking outside closes active card */
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.service-card')) {
+      document.querySelectorAll('.service-card.is-active').forEach(function (c) {
+        c.classList.remove('is-active');
+        c.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
   /* Contact form */
   var form = document.getElementById("contact-form");
   var feedback = document.getElementById("form-feedback");

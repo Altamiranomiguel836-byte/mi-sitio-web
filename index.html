@@ -32,24 +32,49 @@
     </header>
 
     <main>
+
+      <!-- ——— Hero con shader animado ——— -->
       <section class="hero" aria-label="Introducción">
-        <div class="hero__layout">
-          <div class="hero__content">
-            <p class="hero__eyebrow" data-reveal>Estudio digital · Costa Rica</p>
-            <h1 class="hero__title" data-reveal>Diseño web que convierte visitas en clientes</h1>
-            <p class="hero__subtitle" data-reveal>
-              Desarrollo sitios corporativos, aplicaciones y tiendas en línea con estética moderna, rendimiento optimizado y una experiencia que refleja la calidad de tu marca.
-            </p>
-            <div class="hero__actions" data-reveal>
-              <a class="btn btn--primary" href="contacto.html">Solicitar cotización</a>
-              <a class="btn btn--ghost" href="servicios.html">Ver portafolio</a>
-            </div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+        <!-- Velo de oscurecimiento en bordes -->
+        <div class="hero__veil" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+          <!-- Badge de confianza (CSS animation, no data-reveal) -->
+          <div class="hero__badge">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Estudio digital · Costa Rica
           </div>
-          <figure class="hero__visual" data-reveal="right" aria-hidden="true">
-            <img src="img/hero-workspace.jpg" alt="" width="600" height="400" loading="eager" decoding="async" />
-          </figure>
+
+          <!-- Titular multi-línea (cada línea tiene animación CSS propia) -->
+          <h1 class="hero__title">
+            <span class="hero__title-line hero__title-line--1">Diseño web que</span>
+            <span class="hero__title-line hero__title-line--2">convierte visitas</span>
+            <span class="hero__title-line hero__title-line--3">en clientes</span>
+          </h1>
+
+          <!-- Subtítulo -->
+          <p class="hero__subtitle">
+            Desarrollo sitios corporativos, aplicaciones y tiendas en línea con
+            estética moderna, rendimiento optimizado y una experiencia que
+            refleja la calidad de tu marca.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="contacto.html">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              Solicitar cotización
+            </a>
+            <a class="btn btn--ghost" href="servicios.html">
+              Ver portafolio
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
 
+        <!-- Stats — animados por JS stagger -->
         <ul class="stats" data-reveal-stagger aria-label="Cifras del estudio">
           <li class="stat">
             <span class="stat__value">15+</span>
@@ -64,26 +89,34 @@
             <span class="stat__label">Sitios responsive</span>
           </li>
         </ul>
-
-        <div class="features" data-reveal-stagger aria-label="Enfoque de trabajo">
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></span>
-            <h2 class="feature-card__title">Diseño UI</h2>
-            <p class="feature-card__text">Interfaces claras, tipografía cuidada y paletas coherentes con tu marca.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fas fa-code"></i></span>
-            <h2 class="feature-card__title">Desarrollo</h2>
-            <p class="feature-card__text">Código limpio, accesible y optimizado para móvil y escritorio.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-card__icon" aria-hidden="true"><i class="fas fa-rocket"></i></span>
-            <h2 class="feature-card__title">Lanzamiento</h2>
-            <p class="feature-card__text">Entrega lista para publicar, con soporte y espacio para crecer.</p>
-          </article>
-        </div>
       </section>
 
+      <!-- ——— Features ——— -->
+      <div class="features" data-reveal-stagger aria-label="Enfoque de trabajo">
+        <article class="feature-card">
+          <span class="feature-card__icon" aria-hidden="true">
+            <i class="fas fa-wand-magic-sparkles"></i>
+          </span>
+          <h2 class="feature-card__title">Diseño UI</h2>
+          <p class="feature-card__text">Interfaces claras, tipografía cuidada y paletas coherentes con tu marca.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon" aria-hidden="true">
+            <i class="fas fa-code"></i>
+          </span>
+          <h2 class="feature-card__title">Desarrollo</h2>
+          <p class="feature-card__text">Código limpio, accesible y optimizado para móvil y escritorio.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon" aria-hidden="true">
+            <i class="fas fa-rocket"></i>
+          </span>
+          <h2 class="feature-card__title">Lanzamiento</h2>
+          <p class="feature-card__text">Entrega lista para publicar, con soporte y espacio para crecer.</p>
+        </article>
+      </div>
+
+      <!-- ——— Showcase ——— -->
       <section class="showcase panel" aria-labelledby="showcase-heading" data-reveal>
         <div class="section-head">
           <h2 id="showcase-heading" class="section-head__title">Trabajos recientes</h2>
@@ -91,23 +124,53 @@
         </div>
         <div class="showcase-grid">
           <a href="servicios.html#diseno-web" class="showcase-card">
-            <img src="img/diseno-web-1.jpg" alt="Dashboard y sitio corporativo" width="400" height="260" loading="lazy" decoding="async" />
-            <span class="showcase-card__tag">Diseño web</span>
-            <span class="showcase-card__title">Sitios corporativos</span>
+            <div class="showcase-card__media">
+              <img src="img/diseno-web-1.jpg" alt="Dashboard y sitio corporativo" width="800" height="450" loading="lazy" decoding="async" />
+              <div class="showcase-card__overlay" aria-hidden="true">
+                <span class="showcase-card__overlay-cta">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Ver proyecto
+                </span>
+              </div>
+            </div>
+            <div class="showcase-card__footer">
+              <span class="showcase-card__tag">Diseño web</span>
+              <span class="showcase-card__title">Sitios corporativos</span>
+            </div>
           </a>
+
           <a href="servicios.html#apps" class="showcase-card">
-            <img src="img/app-movil-1.jpg" alt="Interfaz de aplicación móvil" width="400" height="260" loading="lazy" decoding="async" />
-            <span class="showcase-card__tag">Apps</span>
-            <span class="showcase-card__title">Experiencias móviles</span>
+            <div class="showcase-card__media">
+              <img src="img/app-movil-1.jpg" alt="Interfaz de aplicación móvil" width="800" height="450" loading="lazy" decoding="async" />
+              <div class="showcase-card__overlay" aria-hidden="true">
+                <span class="showcase-card__overlay-cta">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Ver proyecto
+                </span>
+              </div>
+            </div>
+            <div class="showcase-card__footer">
+              <span class="showcase-card__tag">Apps</span>
+              <span class="showcase-card__title">Experiencias móviles</span>
+            </div>
           </a>
+
           <a href="servicios.html#ecommerce" class="showcase-card">
-            <img src="img/ecommerce-1.jpg" alt="Tienda en línea" width="400" height="260" loading="lazy" decoding="async" />
-            <span class="showcase-card__tag">E-commerce</span>
-            <span class="showcase-card__title">Tiendas en línea</span>
+            <div class="showcase-card__media">
+              <img src="img/ecommerce-1.jpg" alt="Tienda en línea" width="800" height="450" loading="lazy" decoding="async" />
+              <div class="showcase-card__overlay" aria-hidden="true">
+                <span class="showcase-card__overlay-cta">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Ver proyecto
+                </span>
+              </div>
+            </div>
+            <div class="showcase-card__footer">
+              <span class="showcase-card__tag">E-commerce</span>
+              <span class="showcase-card__title">Tiendas en línea</span>
+            </div>
           </a>
         </div>
       </section>
 
+      <!-- ——— Proceso ——— -->
       <section class="process" aria-labelledby="process-heading" data-reveal>
         <div class="section-head section-head--center">
           <h2 id="process-heading" class="section-head__title">Cómo trabajamos</h2>
@@ -137,11 +200,13 @@
         </ol>
       </section>
 
+      <!-- ——— CTA ——— -->
       <section class="cta-band" aria-label="Llamada a la acción" data-reveal>
         <p class="cta-band__text">¿Listo para dar el siguiente paso con tu presencia digital?</p>
         <a class="btn btn--primary" href="contacto.html">Agendar una conversación</a>
       </section>
 
+      <!-- ——— Dock ——— -->
       <section class="dock-section" aria-label="Accesos rápidos" data-reveal>
         <p class="dock-section__hint">Explora el estudio</p>
         <div class="dock" role="list">
@@ -181,5 +246,6 @@
   </div>
 
   <script src="js/site.js" defer></script>
+  <script src="js/shader.js" defer></script>
 </body>
 </html>
