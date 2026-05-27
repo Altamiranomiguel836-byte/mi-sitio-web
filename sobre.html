@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conoce a Miguel Gálvez, fundador de Ale's Design — diseño y desarrollo web independiente en Alajuela, Costa Rica." />
+  <title>Sobre mí · Ale's Design</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff5c47'/%3E%3Cstop offset='100%25' stop-color='%237b6cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2308080c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='700' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="page--sobre">
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__bar"></div>
+  </div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.html" class="site-header__brand">Ale's <span>Design</span></a>
+      <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Principal">
+        <a href="index.html" class="main-nav__link">Inicio</a>
+        <a href="servicios.html" class="main-nav__link">Servicios</a>
+        <a href="contacto.html" class="main-nav__link">Contacto</a>
+        <a href="sobre.html" class="main-nav__link main-nav__link--active" aria-current="page">Sobre mí</a>
+      </nav>
+    </header>
+
+    <main class="inner-page inner-page--wide">
+      <header class="page-header" data-reveal>
+        <h1 class="page-header__title">Sobre mí</h1>
+        <p class="page-header__lead">Diseñador y desarrollador web independiente detrás de Ale's Design.</p>
+      </header>
+
+      <article class="about-profile panel" aria-label="Perfil" data-reveal="scale">
+        <figure class="about-photo">
+          <img
+            src="img/Foto.jpeg"
+            alt="Miguel Gálvez, fundador de Ale's Design"
+            width="400"
+            height="400"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <p class="about-profile__name">Miguel Gálvez</p>
+        <p class="about-profile__role">Fundador · Ale's Design</p>
+        <p class="about-profile__bio">
+          Soy desarrollador web con base en Alajuela, Costa Rica. Creé <strong>Ale's Design</strong> para ayudar a negocios y emprendedores a tener una presencia digital profesional: sitios que cargan rápido, se ven bien en cualquier dispositivo y comunican con claridad lo que ofreces.
+        </p>
+        <p class="about-profile__bio">
+          Me apasionan la tecnología, la programación y el diseño de interfaces. Cada proyecto es una oportunidad de aprender, probar ideas nuevas y entregar algo del que puedas sentirte orgulloso.
+        </p>
+        <div class="skill-tags" data-reveal-stagger aria-label="Habilidades">
+          <span class="skill-tag">HTML & CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">UI / UX</span>
+          <span class="skill-tag">Responsive</span>
+          <span class="skill-tag">Apps web</span>
+          <span class="skill-tag">E-commerce</span>
+          <span class="skill-tag">SEO básico</span>
+        </div>
+      </article>
+
+      <section class="values panel" aria-labelledby="values-heading" data-reveal>
+        <h2 id="values-heading" class="catalog-section__title">
+          <i class="fas fa-heart" aria-hidden="true"></i> Lo que me importa
+        </h2>
+        <div class="values-grid">
+          <article class="value-card">
+            <h3 class="value-card__title">Claridad</h3>
+            <p class="value-card__text">Sitios fáciles de navegar, sin distracciones innecesarias.</p>
+          </article>
+          <article class="value-card">
+            <h3 class="value-card__title">Calidad</h3>
+            <p class="value-card__text">Código ordenado y diseño cuidado en cada detalle.</p>
+          </article>
+          <article class="value-card">
+            <h3 class="value-card__title">Comunicación</h3>
+            <p class="value-card__text">Te mantengo al tanto en cada etapa del proyecto.</p>
+          </article>
+        </div>
+      </section>
+
+      <p data-reveal class="page-cta">
+        <a class="btn btn--primary" href="contacto.html">Trabajemos juntos</a>
+      </p>
+    </main>
+
+    <footer class="site-footer" data-reveal>
+      <p class="site-footer__brand">Ale's Design</p>
+      <p class="site-footer__copy">© 2026 · Alajuela, Costa Rica</p>
+      <nav class="site-footer__links" aria-label="Enlaces">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="js/site.js" defer></script>
+</body>
+</html>

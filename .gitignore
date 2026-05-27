@@ -1,0 +1,12 @@
+# Dependencias
+node_modules/
+
+# macOS
+.DS_Store
+
+# Entornos locales
+.env
+.env.local
+
+# Claude Code
+.claude/
