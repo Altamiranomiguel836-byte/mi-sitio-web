@@ -3,129 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ale's Design — Diseño y desarrollo web en Costa Rica. Sitios corporativos, apps y tiendas en línea." />
+  <meta name="description" content="Ale's Design — Estudio de diseño y desarrollo web en Costa Rica. Sitios corporativos, apps y tiendas en línea con identidad visual memorable." />
   <title>Inicio · Ale's Design</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff5c47'/%3E%3Cstop offset='100%25' stop-color='%237b6cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2308080c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='700' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="page--inicio">
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__bar"></div>
+  </div>
 
-  <header class="header">
-    <a href="index.html" class="logo">Ale's <span>Design</span></a>
-    <button class="nav-btn" aria-label="Abrir menú" aria-expanded="false">☰</button>
-    <nav class="nav" id="main-nav" aria-label="Principal">
-      <a href="index.html" class="nav__link nav__link--active" aria-current="page">Inicio</a>
-      <a href="servicios.html" class="nav__link">Servicios</a>
-      <a href="contacto.html" class="nav__link">Contacto</a>
-      <a href="sobre.html" class="nav__link">Sobre mí</a>
-    </nav>
-  </header>
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.html" class="site-header__brand">Ale's <span>Design</span></a>
+      <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Principal">
+        <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Inicio</a>
+        <a href="servicios.html" class="main-nav__link">Servicios</a>
+        <a href="contacto.html" class="main-nav__link">Contacto</a>
+        <a href="sobre.html" class="main-nav__link">Sobre mí</a>
+      </nav>
+    </header>
 
-  <main>
-
-    <section class="hero">
-      <p class="hero__tag">Estudio digital · Costa Rica</p>
-      <h1 class="hero__title">Diseño web que convierte visitas en clientes</h1>
-      <p class="hero__text">
-        Desarrollo sitios corporativos, aplicaciones y tiendas en línea con estética moderna y una experiencia que refleja la calidad de tu marca.
-      </p>
-      <div class="hero__btns">
-        <a href="contacto.html" class="btn btn--dark">Solicitar cotización</a>
-        <a href="servicios.html" class="btn btn--outline">Ver portafolio</a>
-      </div>
-    </section>
-
-    <div class="container">
-      <div class="stats">
-        <div class="stat">
-          <span class="stat__num">15+</span>
-          <span class="stat__label">Proyectos entregados</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">3</span>
-          <span class="stat__label">Áreas de especialidad</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">100%</span>
-          <span class="stat__label">Sitios responsive</span>
-        </div>
-      </div>
-    </div>
-
-    <section class="works">
-      <div class="section-head">
-        <h2 class="section-title">Trabajos recientes</h2>
-        <p class="section-sub">Una muestra de lo que puedo construir para tu negocio.</p>
-      </div>
-      <div class="works-grid">
-        <a href="servicios.html" class="work-card">
-          <img src="img/diseno-web-1.jpg" alt="Sitio corporativo" loading="lazy" width="400" height="300" />
-          <div class="work-card__info">
-            <span class="work-card__tag">Diseño web</span>
-            <span class="work-card__title">Sitios corporativos</span>
+    <main>
+      <section class="hero" aria-label="Introducción">
+        <div class="hero__layout">
+          <div class="hero__content">
+            <p class="hero__eyebrow" data-reveal>Estudio digital · Costa Rica</p>
+            <h1 class="hero__title" data-reveal>Diseño web que convierte visitas en clientes</h1>
+            <p class="hero__subtitle" data-reveal>
+              Desarrollo sitios corporativos, aplicaciones y tiendas en línea con estética moderna, rendimiento optimizado y una experiencia que refleja la calidad de tu marca.
+            </p>
+            <div class="hero__actions" data-reveal>
+              <a class="btn btn--primary" href="contacto.html">Solicitar cotización</a>
+              <a class="btn btn--ghost" href="servicios.html">Ver portafolio</a>
+            </div>
           </div>
-        </a>
-        <a href="servicios.html" class="work-card">
-          <img src="img/app-movil-1.jpg" alt="Aplicación móvil" loading="lazy" width="400" height="300" />
-          <div class="work-card__info">
-            <span class="work-card__tag">Apps</span>
-            <span class="work-card__title">Experiencias móviles</span>
-          </div>
-        </a>
-        <a href="servicios.html" class="work-card">
-          <img src="img/ecommerce-1.jpg" alt="Tienda en línea" loading="lazy" width="400" height="300" />
-          <div class="work-card__info">
-            <span class="work-card__tag">E-commerce</span>
-            <span class="work-card__title">Tiendas en línea</span>
-          </div>
-        </a>
-      </div>
-    </section>
+          <figure class="hero__visual" data-reveal="right" aria-hidden="true">
+            <img src="img/hero-workspace.jpg" alt="" width="600" height="400" loading="eager" decoding="async" />
+          </figure>
+        </div>
 
-    <section class="process">
-      <div class="section-head section-head--center">
-        <h2 class="section-title">Cómo trabajamos</h2>
-        <p class="section-sub">De la idea al sitio publicado, paso a paso.</p>
-      </div>
-      <ol class="steps">
-        <li class="step">
-          <span class="step__num">01</span>
-          <h3 class="step__title">Descubrimiento</h3>
-          <p class="step__text">Entiendo tu negocio, audiencia y objetivos para definir el alcance.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">02</span>
-          <h3 class="step__title">Diseño</h3>
-          <p class="step__text">Propongo wireframes e interfaz visual alineada con tu identidad.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">03</span>
-          <h3 class="step__title">Desarrollo</h3>
-          <p class="step__text">Construyo el sitio con buenas prácticas, pruebas y optimización.</p>
-        </li>
-        <li class="step">
-          <span class="step__num">04</span>
-          <h3 class="step__title">Entrega</h3>
-          <p class="step__text">Publicamos y dejo todo listo para que crezcas.</p>
-        </li>
-      </ol>
-    </section>
+        <ul class="stats" data-reveal-stagger aria-label="Cifras del estudio">
+          <li class="stat">
+            <span class="stat__value">15+</span>
+            <span class="stat__label">Proyectos entregados</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">3</span>
+            <span class="stat__label">Áreas de especialidad</span>
+          </li>
+          <li class="stat">
+            <span class="stat__value">100%</span>
+            <span class="stat__label">Sitios responsive</span>
+          </li>
+        </ul>
 
-    <section class="cta">
-      <h2 class="cta__title">¿Listo para dar el siguiente paso?</h2>
-      <a href="contacto.html" class="btn btn--dark">Agendar una conversación</a>
-    </section>
+        <div class="features" data-reveal-stagger aria-label="Enfoque de trabajo">
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true"><i class="fas fa-wand-magic-sparkles"></i></span>
+            <h2 class="feature-card__title">Diseño UI</h2>
+            <p class="feature-card__text">Interfaces claras, tipografía cuidada y paletas coherentes con tu marca.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true"><i class="fas fa-code"></i></span>
+            <h2 class="feature-card__title">Desarrollo</h2>
+            <p class="feature-card__text">Código limpio, accesible y optimizado para móvil y escritorio.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-card__icon" aria-hidden="true"><i class="fas fa-rocket"></i></span>
+            <h2 class="feature-card__title">Lanzamiento</h2>
+            <p class="feature-card__text">Entrega lista para publicar, con soporte y espacio para crecer.</p>
+          </article>
+        </div>
+      </section>
 
-  </main>
+      <section class="showcase panel" aria-labelledby="showcase-heading" data-reveal>
+        <div class="section-head">
+          <h2 id="showcase-heading" class="section-head__title">Trabajos recientes</h2>
+          <p class="section-head__lead">Una muestra de lo que puedo construir para tu negocio.</p>
+        </div>
+        <div class="showcase-grid">
+          <a href="servicios.html#diseno-web" class="showcase-card">
+            <img src="img/diseno-web-1.jpg" alt="Dashboard y sitio corporativo" width="400" height="260" loading="lazy" decoding="async" />
+            <span class="showcase-card__tag">Diseño web</span>
+            <span class="showcase-card__title">Sitios corporativos</span>
+          </a>
+          <a href="servicios.html#apps" class="showcase-card">
+            <img src="img/app-movil-1.jpg" alt="Interfaz de aplicación móvil" width="400" height="260" loading="lazy" decoding="async" />
+            <span class="showcase-card__tag">Apps</span>
+            <span class="showcase-card__title">Experiencias móviles</span>
+          </a>
+          <a href="servicios.html#ecommerce" class="showcase-card">
+            <img src="img/ecommerce-1.jpg" alt="Tienda en línea" width="400" height="260" loading="lazy" decoding="async" />
+            <span class="showcase-card__tag">E-commerce</span>
+            <span class="showcase-card__title">Tiendas en línea</span>
+          </a>
+        </div>
+      </section>
 
-  <footer class="footer">
-    <p class="footer__brand">Ale's Design</p>
-    <p class="footer__copy">© 2026 · Alajuela, Costa Rica</p>
-    <nav class="footer__nav" aria-label="Pie de página">
-      <a href="servicios.html">Servicios</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="sobre.html">Sobre mí</a>
-    </nav>
-  </footer>
+      <section class="process" aria-labelledby="process-heading" data-reveal>
+        <div class="section-head section-head--center">
+          <h2 id="process-heading" class="section-head__title">Cómo trabajamos</h2>
+          <p class="section-head__lead">Un proceso claro, de la idea al sitio publicado.</p>
+        </div>
+        <ol class="process-steps" data-reveal-stagger>
+          <li class="process-step">
+            <span class="process-step__num">01</span>
+            <h3 class="process-step__title">Descubrimiento</h3>
+            <p class="process-step__text">Entiendo tu negocio, audiencia y objetivos para definir el alcance.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-step__num">02</span>
+            <h3 class="process-step__title">Diseño</h3>
+            <p class="process-step__text">Propongo wireframes y una interfaz visual alineada con tu identidad.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-step__num">03</span>
+            <h3 class="process-step__title">Desarrollo</h3>
+            <p class="process-step__text">Construyo el sitio con buenas prácticas, pruebas y optimización.</p>
+          </li>
+          <li class="process-step">
+            <span class="process-step__num">04</span>
+            <h3 class="process-step__title">Entrega</h3>
+            <p class="process-step__text">Publicamos, revisamos juntos y dejo todo listo para que crezcas.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="cta-band" aria-label="Llamada a la acción" data-reveal>
+        <p class="cta-band__text">¿Listo para dar el siguiente paso con tu presencia digital?</p>
+        <a class="btn btn--primary" href="contacto.html">Agendar una conversación</a>
+      </section>
+
+      <section class="dock-section" aria-label="Accesos rápidos" data-reveal>
+        <p class="dock-section__hint">Explora el estudio</p>
+        <div class="dock" role="list">
+          <a href="servicios.html#diseno-web" class="dock__item" role="listitem" title="Diseño web">
+            <span class="dock__icon" aria-hidden="true"><i class="fas fa-palette"></i></span>
+            <span class="dock__label">Diseño web</span>
+          </a>
+          <a href="servicios.html#apps" class="dock__item" role="listitem" title="Apps">
+            <span class="dock__icon" aria-hidden="true"><i class="fas fa-mobile-screen"></i></span>
+            <span class="dock__label">Apps</span>
+          </a>
+          <a href="servicios.html#ecommerce" class="dock__item" role="listitem" title="E-commerce">
+            <span class="dock__icon" aria-hidden="true"><i class="fas fa-cart-shopping"></i></span>
+            <span class="dock__label">E-commerce</span>
+          </a>
+          <a href="contacto.html" class="dock__item" role="listitem" title="Contacto">
+            <span class="dock__icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+            <span class="dock__label">Contacto</span>
+          </a>
+          <a href="sobre.html" class="dock__item" role="listitem" title="Sobre mí">
+            <span class="dock__icon" aria-hidden="true"><i class="fas fa-user"></i></span>
+            <span class="dock__label">Sobre mí</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-reveal>
+      <p class="site-footer__brand">Ale's Design</p>
+      <p class="site-footer__copy">© 2026 · Alajuela, Costa Rica</p>
+      <nav class="site-footer__links" aria-label="Enlaces">
+        <a href="servicios.html">Servicios</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre.html">Sobre mí</a>
+      </nav>
+    </footer>
+  </div>
 
   <script src="js/site.js" defer></script>
 </body>
