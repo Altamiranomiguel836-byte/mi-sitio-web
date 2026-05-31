@@ -20,15 +20,22 @@
   <div class="page-shell">
     <header class="site-header">
       <a href="index.html" class="site-header__brand">Ale's <span>Design</span></a>
-      <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-      </button>
       <nav id="main-nav" class="main-nav" aria-label="Principal">
         <a href="index.html" class="main-nav__link main-nav__link--active" aria-current="page">Inicio</a>
         <a href="servicios.html" class="main-nav__link">Servicios</a>
+        <a href="tienda.html" class="main-nav__link">Tienda</a>
         <a href="contacto.html" class="main-nav__link">Contacto</a>
         <a href="sobre.html" class="main-nav__link">Sobre mí</a>
       </nav>
+      <div class="site-header__actions">
+        <button type="button" class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
+          <i class="fas fa-cart-shopping" aria-hidden="true"></i>
+          <span class="cart-badge" aria-live="polite">0</span>
+        </button>
+        <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
     </header>
 
     <main>
@@ -247,5 +254,6 @@
 
   <script src="js/site.js" defer></script>
   <script src="js/shader.js" defer></script>
+  <script src="js/cart.js" defer></script>
 </body>
 </html>
