@@ -425,7 +425,11 @@ body::after {
    ★  HERO — WebGL SHADER
    ══════════════════════════════════════════════════════════════ */
 
-/* Canvas fijo: visible en toda la página de inicio */
+/* Canvas fijo: detrás de todo el contenido, visible por el body transparente */
+body.page--inicio {
+  background: transparent;
+}
+
 body.page--inicio #hero-canvas {
   position: fixed;
   inset: 0;
@@ -1785,35 +1789,23 @@ body.page--inicio main {
   width: 100%;
 }
 
-/* Hero: sin caja, sin borde, limpio y edge-to-edge */
+/* Hero: sin caja visible — el canvas fijo cubre todo el fondo */
 body.page--inicio .hero {
-  max-width: 100vw;
-  width: calc(100% + 3rem);
-  margin-left: -1.5rem;
   border: none;
   border-radius: 0;
   background: transparent;
-  overflow: hidden;
 }
 
-@media (max-width: 560px) {
-  body.page--inicio .hero {
-    width: calc(100% + 2rem);
-    margin-left: -1rem;
-  }
-}
-
-/* Secciones debajo del hero: fondo semi-transparente para leer sobre el canvas */
+/* Secciones debajo del hero: glassmorphism sobre el canvas */
 body.page--inicio .features,
 body.page--inicio .showcase,
 body.page--inicio .process,
 body.page--inicio .cta-band,
 body.page--inicio .dock-section {
-  background: rgba(8, 8, 12, 0.72);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(8, 8, 14, 0.78);
   border-radius: var(--radius-xl);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255,255,255,.07);
+  box-shadow: 0 4px 32px rgba(0,0,0,.4);
 }
 
 body.page--inicio .dock__item:hover .dock__icon,
@@ -2543,7 +2535,7 @@ mark.highlight-mark {
 }
 
 /* ══════════════════════════════════════════════════════════════
-   PORTFOLIO GRID
+   PORTFOLIO GRID (legado — no se usa actualmente)
    ══════════════════════════════════════════════════════════════ */
 
 .portfolio-grid {

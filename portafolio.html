@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portafolio de Ale's Design — casos de éxito, testimonios y proyectos reales de diseño web en Costa Rica." />
+  <meta name="description" content="Portafolio de Ale's Design — casos de éxito, proyectos reales y resultados medibles en diseño web, Costa Rica." />
   <title>Portafolio · Ale's Design</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff5c47'/%3E%3Cstop offset='100%25' stop-color='%237b6cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2308080c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='700' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/portafolio.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
@@ -41,90 +42,131 @@
 
     <main>
 
-      <!-- ——— Encabezado de página ——— -->
-      <div class="page-header" data-reveal>
-        <h1 class="page-header__title">
-          Portafolio &amp; <mark class="highlight-mark">Casos de éxito</mark>
+      <!-- ——— Hero de portafolio ——— -->
+      <section class="pf-hero" data-reveal>
+        <div class="pf-hero__badge">
+          <span class="hero__badge-dot" aria-hidden="true"></span>
+          Trabajos seleccionados
+        </div>
+        <h1 class="pf-hero__title">
+          Proyectos que <mark class="highlight-mark">hablan</mark><br>por sí solos
         </h1>
-        <p class="page-header__lead">
-          Proyectos reales con resultados medibles — de la idea a la pantalla,
-          con identidad visual y código que escala.
+        <p class="pf-hero__lead">
+          Cada proyecto es una historia de colaboración, diseño intencional y resultados reales.
+          Aquí están mis casos más representativos.
         </p>
-      </div>
 
-      <!-- ══════════════════════════════════════════════
-           CASOS DE ÉXITO — con figure + figcaption
-           ══════════════════════════════════════════════ -->
-      <section class="inner-page inner-page--wide" aria-labelledby="casos-heading">
-        <div class="section-head" data-reveal>
-          <h2 id="casos-heading" class="section-head__title">Proyectos destacados</h2>
-          <p class="section-head__lead">Cada proyecto tiene historia. Aquí están las que más me enorgullecen.</p>
+        <!-- Métricas rápidas -->
+        <ul class="pf-metrics" aria-label="Resultados globales">
+          <li class="pf-metric">
+            <span class="pf-metric__val" data-count="15">0</span><span class="pf-metric__unit">+</span>
+            <span class="pf-metric__label">Proyectos entregados</span>
+          </li>
+          <li class="pf-metric">
+            <span class="pf-metric__val" data-count="98">0</span><span class="pf-metric__unit">%</span>
+            <span class="pf-metric__label">Satisfacción del cliente</span>
+          </li>
+          <li class="pf-metric">
+            <span class="pf-metric__val" data-count="3">0</span><span class="pf-metric__unit">x</span>
+            <span class="pf-metric__label">Promedio de ROI reportado</span>
+          </li>
+          <li class="pf-metric">
+            <span class="pf-metric__val" data-count="100">0</span><span class="pf-metric__unit">%</span>
+            <span class="pf-metric__label">Responsive desde el día 1</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ——— Filtros + grilla de proyectos ——— -->
+      <section class="pf-section" aria-labelledby="proyectos-heading">
+        <div class="pf-filter-bar" role="group" aria-label="Filtrar proyectos">
+          <button class="pf-filter-btn is-active" data-filter="all">Todos</button>
+          <button class="pf-filter-btn" data-filter="web">Diseño Web</button>
+          <button class="pf-filter-btn" data-filter="app">Apps</button>
+          <button class="pf-filter-btn" data-filter="ecommerce">E-commerce</button>
         </div>
 
-        <div class="portfolio-grid" data-reveal-stagger>
+        <h2 id="proyectos-heading" class="sr-only">Proyectos</h2>
 
-          <article class="portfolio-card">
-            <figure class="portfolio-card__figure">
-              <img src="img/diseno-web-1.jpg" alt="Sitio corporativo para empresa tech" width="800" height="450" loading="lazy" decoding="async" />
-              <figcaption class="portfolio-card__caption">
-                <span class="portfolio-card__type">Diseño web corporativo</span>
-                <time class="portfolio-card__date" datetime="2026-03">Marzo 2026</time>
+        <div class="pf-grid" id="pf-grid">
+
+          <!-- Proyecto 1 -->
+          <article class="pf-card" data-category="web" data-reveal>
+            <figure class="pf-card__media">
+              <img src="img/diseno-web-1.jpg" alt="Dashboard sitio corporativo TechFlow" width="800" height="450" loading="lazy" decoding="async" />
+              <figcaption class="pf-card__overlay">
+                <span class="pf-card__overlay-tag">Diseño Web</span>
+                <a href="contacto.html" class="pf-card__overlay-cta">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Ver detalles
+                </a>
               </figcaption>
             </figure>
-            <div class="portfolio-card__body">
-              <h3 class="portfolio-card__title">Sitio corporativo TechFlow</h3>
-              <p class="portfolio-card__desc">
-                Rediseño completo con foco en conversión. El tiempo de carga bajó de
-                <mark>8 s a 1.4 s</mark> y las solicitudes aumentaron un 40 % en el primer mes.
+            <div class="pf-card__body">
+              <header class="pf-card__head">
+                <time class="pf-card__date" datetime="2026-03">Mar 2026</time>
+                <span class="pf-card__category">Diseño Web</span>
+              </header>
+              <h3 class="pf-card__title">Sitio corporativo TechFlow</h3>
+              <p class="pf-card__desc">
+                Rediseño completo enfocado en conversión. Carga bajó de 8 s a 1.4 s,
+                consultas aumentaron <mark>+40 %</mark> en el primer mes.
               </p>
-              <ul class="portfolio-card__tags">
-                <li>HTML / CSS</li>
-                <li>JavaScript</li>
-                <li>Diseño UI</li>
+              <ul class="pf-card__stack">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>UI/UX</li>
               </ul>
             </div>
           </article>
 
-          <article class="portfolio-card">
-            <figure class="portfolio-card__figure">
-              <img src="img/app-movil-1.jpg" alt="App móvil de delivery" width="800" height="450" loading="lazy" decoding="async" />
-              <figcaption class="portfolio-card__caption">
-                <span class="portfolio-card__type">App móvil</span>
-                <time class="portfolio-card__date" datetime="2025-11">Noviembre 2025</time>
+          <!-- Proyecto 2 -->
+          <article class="pf-card" data-category="app" data-reveal>
+            <figure class="pf-card__media">
+              <img src="img/app-movil-1.jpg" alt="App de delivery móvil" width="800" height="450" loading="lazy" decoding="async" />
+              <figcaption class="pf-card__overlay">
+                <span class="pf-card__overlay-tag">App Móvil</span>
+                <a href="contacto.html" class="pf-card__overlay-cta">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Ver detalles
+                </a>
               </figcaption>
             </figure>
-            <div class="portfolio-card__body">
-              <h3 class="portfolio-card__title">App Delivery Rápido</h3>
-              <p class="portfolio-card__desc">
-                Interfaz limpia e intuitiva para <abbr title="Progressive Web App">PWA</abbr>
-                de entregas. Calificación de usuarios: <mark>4.8 / 5</mark> en la primera semana.
+            <div class="pf-card__body">
+              <header class="pf-card__head">
+                <time class="pf-card__date" datetime="2025-11">Nov 2025</time>
+                <span class="pf-card__category">App Móvil</span>
+              </header>
+              <h3 class="pf-card__title">App Delivery Rápido</h3>
+              <p class="pf-card__desc">
+                <abbr title="Progressive Web App">PWA</abbr> de entregas con flujo
+                de compra optimizado. Rating de usuarios: <mark>4.8 / 5</mark> la primera semana.
               </p>
-              <ul class="portfolio-card__tags">
-                <li>PWA</li>
-                <li>UX Research</li>
-                <li>Prototyping</li>
+              <ul class="pf-card__stack">
+                <li>PWA</li><li>UX Research</li><li>Figma</li><li>API REST</li>
               </ul>
             </div>
           </article>
 
-          <article class="portfolio-card">
-            <figure class="portfolio-card__figure">
-              <img src="img/ecommerce-1.jpg" alt="Tienda en línea de ropa" width="800" height="450" loading="lazy" decoding="async" />
-              <figcaption class="portfolio-card__caption">
-                <span class="portfolio-card__type">E-commerce</span>
-                <time class="portfolio-card__date" datetime="2025-08">Agosto 2025</time>
+          <!-- Proyecto 3 -->
+          <article class="pf-card" data-category="ecommerce" data-reveal>
+            <figure class="pf-card__media">
+              <img src="img/ecommerce-1.jpg" alt="Tienda en línea Moda Urbana" width="800" height="450" loading="lazy" decoding="async" />
+              <figcaption class="pf-card__overlay">
+                <span class="pf-card__overlay-tag">E-commerce</span>
+                <a href="contacto.html" class="pf-card__overlay-cta">
+                  <i class="fas fa-arrow-up-right-from-square"></i> Ver detalles
+                </a>
               </figcaption>
             </figure>
-            <div class="portfolio-card__body">
-              <h3 class="portfolio-card__title">Tienda Moda Urbana CR</h3>
-              <p class="portfolio-card__desc">
-                Tienda completa con carrito, pasarela de pago y panel de administración.
-                Ventas del primer mes: <mark>₡3.2 M</mark>.
+            <div class="pf-card__body">
+              <header class="pf-card__head">
+                <time class="pf-card__date" datetime="2025-08">Ago 2025</time>
+                <span class="pf-card__category">E-commerce</span>
+              </header>
+              <h3 class="pf-card__title">Tienda Moda Urbana CR</h3>
+              <p class="pf-card__desc">
+                Tienda completa con carrito, pagos en línea y panel de admin.
+                Ventas primer mes: <mark>₡3.2 M</mark>.
               </p>
-              <ul class="portfolio-card__tags">
-                <li>E-commerce</li>
-                <li>Carrito</li>
-                <li>Analytics</li>
+              <ul class="pf-card__stack">
+                <li>E-commerce</li><li>Pagos</li><li>CMS</li><li>Analytics</li>
               </ul>
             </div>
           </article>
@@ -132,15 +174,12 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════════════
-           COMPARATIVA DE SERVICIOS — table
-           ══════════════════════════════════════════════ -->
-      <section class="panel inner-page inner-page--wide comparison-section" aria-labelledby="compare-heading" data-reveal>
+      <!-- ——— Comparativa de planes — table ——— -->
+      <section class="panel pf-table-section" aria-labelledby="compare-heading" data-reveal>
         <div class="section-head section-head--center">
-          <h2 id="compare-heading" class="section-head__title">¿Qué incluye cada servicio?</h2>
-          <p class="section-head__lead">Comparativa clara para que elijas lo que más le conviene a tu negocio.</p>
+          <h2 id="compare-heading" class="section-head__title">¿Qué incluye cada plan?</h2>
+          <p class="section-head__lead">Compara y elige lo que tu proyecto necesita.</p>
         </div>
-
         <div class="table-wrap">
           <table class="comparison-table" aria-label="Comparativa de servicios">
             <thead>
@@ -193,12 +232,11 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════════════
-           TESTIMONIOS — blockquote + cite
-           ══════════════════════════════════════════════ -->
-      <section class="inner-page inner-page--wide" aria-labelledby="testimonios-heading">
+      <!-- ——— Testimonios — blockquote + cite ——— -->
+      <section class="pf-section" aria-labelledby="testimonios-heading">
         <div class="section-head section-head--center" data-reveal>
           <h2 id="testimonios-heading" class="section-head__title">Lo que dicen mis clientes</h2>
+          <p class="section-head__lead">La confianza de quienes ya dieron el paso.</p>
         </div>
 
         <div class="testimonials-grid" data-reveal-stagger>
@@ -211,14 +249,16 @@
               <div class="testimonial-card__avatar" aria-hidden="true">MR</div>
               <div>
                 <cite class="testimonial-card__name">María Rodríguez</cite>
-                <span class="testimonial-card__role">CEO · TechFlow CR</span>
+                <span class="testimonial-card__role">
+                  <abbr title="Chief Executive Officer">CEO</abbr> · TechFlow CR
+                </span>
               </div>
             </figcaption>
           </figure>
 
           <figure class="testimonial-card">
             <blockquote class="testimonial-card__quote">
-              <p>La tienda en línea triplicó nuestras ventas en el primer trimestre. El proceso fue claro, ordenado y sin sorpresas. 100 % recomendado.</p>
+              <p>La tienda triplicó nuestras ventas en el primer trimestre. El proceso fue claro, sin sorpresas. Totalmente recomendado para cualquier negocio que quiera crecer en línea.</p>
             </blockquote>
             <figcaption class="testimonial-card__author">
               <div class="testimonial-card__avatar" aria-hidden="true">CL</div>
@@ -231,7 +271,7 @@
 
           <figure class="testimonial-card">
             <blockquote class="testimonial-card__quote">
-              <p>Profesional, puntual y con una visión creativa excepcional. La app superó los objetivos de usabilidad que habíamos definido desde el día uno.</p>
+              <p>Profesional, puntual y con visión creativa real. La app superó todos los objetivos de usabilidad que definimos desde el inicio del proyecto.</p>
             </blockquote>
             <figcaption class="testimonial-card__author">
               <div class="testimonial-card__avatar" aria-hidden="true">AP</div>
@@ -245,15 +285,12 @@
         </div>
       </section>
 
-      <!-- ══════════════════════════════════════════════
-           FAQ — details + summary
-           ══════════════════════════════════════════════ -->
-      <section class="panel inner-page faq-section" aria-labelledby="faq-heading" data-reveal>
+      <!-- ——— FAQ — details + summary ——— -->
+      <section class="panel pf-faq" aria-labelledby="faq-heading" data-reveal>
         <div class="section-head">
           <h2 id="faq-heading" class="section-head__title">Preguntas frecuentes</h2>
           <p class="section-head__lead">Todo lo que necesitas saber antes de empezar.</p>
         </div>
-
         <div class="faq-list">
 
           <details class="faq-item">
@@ -262,10 +299,9 @@
               ¿Cuánto tiempo tarda el desarrollo de un sitio?
             </summary>
             <p class="faq-item__answer">
-              Depende del alcance. Un sitio básico puede estar listo en
-              <strong>1 semana</strong>; un e-commerce completo puede tomar
-              de <strong>3 a 6 semanas</strong>. Al iniciar el proyecto defino
-              un cronograma detallado contigo.
+              Depende del alcance. Un sitio básico puede estar listo en <strong>1 semana</strong>;
+              un e-commerce completo puede tomar de <strong>3 a 6 semanas</strong>.
+              Al iniciar el proyecto defino un cronograma detallado contigo.
             </p>
           </details>
 
@@ -275,8 +311,8 @@
               ¿Necesito saber de programación para trabajar contigo?
             </summary>
             <p class="faq-item__answer">
-              No. Me encargo de toda la parte técnica. Solo necesitas
-              tener claro tu idea, tu marca y tus objetivos. El resto lo resolvemos juntos.
+              No. Me encargo de toda la parte técnica. Solo necesitas tener clara
+              tu idea, tu marca y tus objetivos. El resto lo resolvemos juntos.
             </p>
           </details>
 
@@ -286,7 +322,7 @@
               ¿Qué pasa si necesito cambios después de la entrega?
             </summary>
             <p class="faq-item__answer">
-              Todos los planes incluyen un período de soporte post-entrega (de 7 a 90 días según el plan).
+              Todos los planes incluyen un período de soporte post-entrega (de 7 a 90 días).
               Fuera de ese período ofrezco paquetes de mantenimiento mensual.
             </p>
           </details>
@@ -298,15 +334,15 @@
             </summary>
             <p class="faq-item__answer">
               Sí. Trabajo de forma remota con clientes de toda Latinoamérica.
-              Las reuniones de seguimiento se realizan por videollamada y los pagos
-              se pueden hacer vía transferencia o plataformas digitales.
+              Las reuniones se hacen por videollamada y los pagos vía transferencia
+              o plataformas digitales.
             </p>
           </details>
 
         </div>
       </section>
 
-      <!-- ——— CTA final ——— -->
+      <!-- ——— CTA ——— -->
       <section class="cta-band" aria-label="Llamada a la acción" data-reveal>
         <p class="cta-band__text">¿Listo para que tu proyecto sea el próximo caso de éxito?</p>
         <a class="btn btn--primary" href="contacto.html">
@@ -331,5 +367,6 @@
 
   <script src="js/site.js" defer></script>
   <script src="js/cart.js" defer></script>
+  <script src="js/portafolio.js" defer></script>
 </body>
 </html>
