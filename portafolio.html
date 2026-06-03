@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Ale's Design — casos de éxito, testimonios y proyectos reales de diseño web en Costa Rica." />
+  <title>Portafolio · Ale's Design</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff5c47'/%3E%3Cstop offset='100%25' stop-color='%237b6cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%2308080c'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='14' font-weight='700' fill='url(%23g)'%3EA%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__bar"></div>
+  </div>
+
+  <div class="page-shell">
+    <header class="site-header">
+      <a href="index.html" class="site-header__brand">Ale's <span>Design</span></a>
+      <nav id="main-nav" class="main-nav" aria-label="Principal">
+        <a href="index.html" class="main-nav__link">Inicio</a>
+        <a href="servicios.html" class="main-nav__link">Servicios</a>
+        <a href="tienda.html" class="main-nav__link">Tienda</a>
+        <a href="contacto.html" class="main-nav__link">Contacto</a>
+        <a href="sobre.html" class="main-nav__link">Sobre mí</a>
+        <a href="portafolio.html" class="main-nav__link main-nav__link--active" aria-current="page">Portafolio</a>
+      </nav>
+      <div class="site-header__actions">
+        <button type="button" class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
+          <i class="fas fa-cart-shopping" aria-hidden="true"></i>
+          <span class="cart-badge" aria-live="polite">0</span>
+        </button>
+        <button type="button" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ——— Encabezado de página ——— -->
+      <div class="page-header" data-reveal>
+        <h1 class="page-header__title">
+          Portafolio &amp; <mark class="highlight-mark">Casos de éxito</mark>
+        </h1>
+        <p class="page-header__lead">
+          Proyectos reales con resultados medibles — de la idea a la pantalla,
+          con identidad visual y código que escala.
+        </p>
+      </div>
+
+      <!-- ══════════════════════════════════════════════
+           CASOS DE ÉXITO — con figure + figcaption
+           ══════════════════════════════════════════════ -->
+      <section class="inner-page inner-page--wide" aria-labelledby="casos-heading">
+        <div class="section-head" data-reveal>
+          <h2 id="casos-heading" class="section-head__title">Proyectos destacados</h2>
+          <p class="section-head__lead">Cada proyecto tiene historia. Aquí están las que más me enorgullecen.</p>
+        </div>
+
+        <div class="portfolio-grid" data-reveal-stagger>
+
+          <article class="portfolio-card">
+            <figure class="portfolio-card__figure">
+              <img src="img/diseno-web-1.jpg" alt="Sitio corporativo para empresa tech" width="800" height="450" loading="lazy" decoding="async" />
+              <figcaption class="portfolio-card__caption">
+                <span class="portfolio-card__type">Diseño web corporativo</span>
+                <time class="portfolio-card__date" datetime="2026-03">Marzo 2026</time>
+              </figcaption>
+            </figure>
+            <div class="portfolio-card__body">
+              <h3 class="portfolio-card__title">Sitio corporativo TechFlow</h3>
+              <p class="portfolio-card__desc">
+                Rediseño completo con foco en conversión. El tiempo de carga bajó de
+                <mark>8 s a 1.4 s</mark> y las solicitudes aumentaron un 40 % en el primer mes.
+              </p>
+              <ul class="portfolio-card__tags">
+                <li>HTML / CSS</li>
+                <li>JavaScript</li>
+                <li>Diseño UI</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <figure class="portfolio-card__figure">
+              <img src="img/app-movil-1.jpg" alt="App móvil de delivery" width="800" height="450" loading="lazy" decoding="async" />
+              <figcaption class="portfolio-card__caption">
+                <span class="portfolio-card__type">App móvil</span>
+                <time class="portfolio-card__date" datetime="2025-11">Noviembre 2025</time>
+              </figcaption>
+            </figure>
+            <div class="portfolio-card__body">
+              <h3 class="portfolio-card__title">App Delivery Rápido</h3>
+              <p class="portfolio-card__desc">
+                Interfaz limpia e intuitiva para <abbr title="Progressive Web App">PWA</abbr>
+                de entregas. Calificación de usuarios: <mark>4.8 / 5</mark> en la primera semana.
+              </p>
+              <ul class="portfolio-card__tags">
+                <li>PWA</li>
+                <li>UX Research</li>
+                <li>Prototyping</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="portfolio-card">
+            <figure class="portfolio-card__figure">
+              <img src="img/ecommerce-1.jpg" alt="Tienda en línea de ropa" width="800" height="450" loading="lazy" decoding="async" />
+              <figcaption class="portfolio-card__caption">
+                <span class="portfolio-card__type">E-commerce</span>
+                <time class="portfolio-card__date" datetime="2025-08">Agosto 2025</time>
+              </figcaption>
+            </figure>
+            <div class="portfolio-card__body">
+              <h3 class="portfolio-card__title">Tienda Moda Urbana CR</h3>
+              <p class="portfolio-card__desc">
+                Tienda completa con carrito, pasarela de pago y panel de administración.
+                Ventas del primer mes: <mark>₡3.2 M</mark>.
+              </p>
+              <ul class="portfolio-card__tags">
+                <li>E-commerce</li>
+                <li>Carrito</li>
+                <li>Analytics</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           COMPARATIVA DE SERVICIOS — table
+           ══════════════════════════════════════════════ -->
+      <section class="panel inner-page inner-page--wide comparison-section" aria-labelledby="compare-heading" data-reveal>
+        <div class="section-head section-head--center">
+          <h2 id="compare-heading" class="section-head__title">¿Qué incluye cada servicio?</h2>
+          <p class="section-head__lead">Comparativa clara para que elijas lo que más le conviene a tu negocio.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="comparison-table" aria-label="Comparativa de servicios">
+            <thead>
+              <tr>
+                <th scope="col">Característica</th>
+                <th scope="col">Básico</th>
+                <th scope="col">Profesional</th>
+                <th scope="col">Empresarial</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Páginas incluidas</td>
+                <td>1 – 3</td>
+                <td>4 – 8</td>
+                <td>Ilimitadas</td>
+              </tr>
+              <tr>
+                <td>Diseño responsivo</td>
+                <td><i class="fas fa-check" aria-label="Sí"></i></td>
+                <td><i class="fas fa-check" aria-label="Sí"></i></td>
+                <td><i class="fas fa-check" aria-label="Sí"></i></td>
+              </tr>
+              <tr>
+                <td>Optimización <abbr title="Search Engine Optimization">SEO</abbr></td>
+                <td>Básico</td>
+                <td>Avanzado</td>
+                <td>Premium</td>
+              </tr>
+              <tr>
+                <td>Carrito de compras</td>
+                <td><i class="fas fa-xmark table-no" aria-label="No"></i></td>
+                <td><i class="fas fa-check" aria-label="Sí"></i></td>
+                <td><i class="fas fa-check" aria-label="Sí"></i></td>
+              </tr>
+              <tr>
+                <td>Soporte post-entrega</td>
+                <td>7 días</td>
+                <td>30 días</td>
+                <td>90 días</td>
+              </tr>
+              <tr>
+                <td>Tiempo de entrega</td>
+                <td>1 semana</td>
+                <td>2 – 3 semanas</td>
+                <td>4 – 6 semanas</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           TESTIMONIOS — blockquote + cite
+           ══════════════════════════════════════════════ -->
+      <section class="inner-page inner-page--wide" aria-labelledby="testimonios-heading">
+        <div class="section-head section-head--center" data-reveal>
+          <h2 id="testimonios-heading" class="section-head__title">Lo que dicen mis clientes</h2>
+        </div>
+
+        <div class="testimonials-grid" data-reveal-stagger>
+
+          <figure class="testimonial-card">
+            <blockquote class="testimonial-card__quote">
+              <p>Ale entregó nuestro sitio en tiempo récord y con una calidad que superó todas nuestras expectativas. El diseño transmite exactamente la identidad de nuestra marca.</p>
+            </blockquote>
+            <figcaption class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">MR</div>
+              <div>
+                <cite class="testimonial-card__name">María Rodríguez</cite>
+                <span class="testimonial-card__role">CEO · TechFlow CR</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <blockquote class="testimonial-card__quote">
+              <p>La tienda en línea triplicó nuestras ventas en el primer trimestre. El proceso fue claro, ordenado y sin sorpresas. 100 % recomendado.</p>
+            </blockquote>
+            <figcaption class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">CL</div>
+              <div>
+                <cite class="testimonial-card__name">Carlos López</cite>
+                <span class="testimonial-card__role">Fundador · Moda Urbana CR</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <blockquote class="testimonial-card__quote">
+              <p>Profesional, puntual y con una visión creativa excepcional. La app superó los objetivos de usabilidad que habíamos definido desde el día uno.</p>
+            </blockquote>
+            <figcaption class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">AP</div>
+              <div>
+                <cite class="testimonial-card__name">Andrea Pérez</cite>
+                <span class="testimonial-card__role">Product Manager · Delivery Rápido</span>
+              </div>
+            </figcaption>
+          </figure>
+
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════
+           FAQ — details + summary
+           ══════════════════════════════════════════════ -->
+      <section class="panel inner-page faq-section" aria-labelledby="faq-heading" data-reveal>
+        <div class="section-head">
+          <h2 id="faq-heading" class="section-head__title">Preguntas frecuentes</h2>
+          <p class="section-head__lead">Todo lo que necesitas saber antes de empezar.</p>
+        </div>
+
+        <div class="faq-list">
+
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <i class="fas fa-circle-question" aria-hidden="true"></i>
+              ¿Cuánto tiempo tarda el desarrollo de un sitio?
+            </summary>
+            <p class="faq-item__answer">
+              Depende del alcance. Un sitio básico puede estar listo en
+              <strong>1 semana</strong>; un e-commerce completo puede tomar
+              de <strong>3 a 6 semanas</strong>. Al iniciar el proyecto defino
+              un cronograma detallado contigo.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <i class="fas fa-circle-question" aria-hidden="true"></i>
+              ¿Necesito saber de programación para trabajar contigo?
+            </summary>
+            <p class="faq-item__answer">
+              No. Me encargo de toda la parte técnica. Solo necesitas
+              tener claro tu idea, tu marca y tus objetivos. El resto lo resolvemos juntos.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <i class="fas fa-circle-question" aria-hidden="true"></i>
+              ¿Qué pasa si necesito cambios después de la entrega?
+            </summary>
+            <p class="faq-item__answer">
+              Todos los planes incluyen un período de soporte post-entrega (de 7 a 90 días según el plan).
+              Fuera de ese período ofrezco paquetes de mantenimiento mensual.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-item__question">
+              <i class="fas fa-circle-question" aria-hidden="true"></i>
+              ¿Trabajas con clientes fuera de Costa Rica?
+            </summary>
+            <p class="faq-item__answer">
+              Sí. Trabajo de forma remota con clientes de toda Latinoamérica.
+              Las reuniones de seguimiento se realizan por videollamada y los pagos
+              se pueden hacer vía transferencia o plataformas digitales.
+            </p>
+          </details>
+
+        </div>
+      </section>
+
+      <!-- ——— CTA final ——— -->
+      <section class="cta-band" aria-label="Llamada a la acción" data-reveal>
+        <p class="cta-band__text">¿Listo para que tu proyecto sea el próximo caso de éxito?</p>
+        <a class="btn btn--primary" href="contacto.html">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          Hablemos
+        </a>
+      </section>
+
+    </main>
+
+    <footer class="site-footer" data-reveal>
+      <p class="site-footer__brand">Ale's Design</p>
+      <p class="site-footer__copy">© 2026 · Alajuela, Costa Rica</p>
+      <nav class="site-footer__links" aria-label="Enlaces">
+        <a href="servicios.html">Servicios</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="sobre.html">Sobre mí</a>
+      </nav>
+    </footer>
+  </div>
+
+  <script src="js/site.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>

@@ -51,6 +51,27 @@
   }
 
   /* ══════════════════════════════════════════════════════════════
+     HERO SCROLL COMPRESSION (solo página inicio)
+     ══════════════════════════════════════════════════════════════ */
+  if (isInicio && !prefersReduced) {
+    var heroEl = document.querySelector('.hero');
+    if (heroEl) {
+      var COMPRESS_ZONE = 0.45; /* fracción del hero donde ocurre el efecto */
+      var onHeroScroll = function () {
+        var scrollY   = window.scrollY;
+        var heroH     = heroEl.offsetHeight;
+        var progress  = Math.min(scrollY / (heroH * COMPRESS_ZONE), 1);
+        var scale     = 1 - progress * 0.07;
+        var opacity   = 1 - progress * 0.35;
+        heroEl.style.transform = 'scale(' + scale.toFixed(4) + ')';
+        heroEl.style.opacity   = opacity.toFixed(4);
+      };
+      window.addEventListener('scroll', onHeroScroll, { passive: true });
+      onHeroScroll(); /* estado inicial */
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════
      MOBILE NAV
      ══════════════════════════════════════════════════════════════ */
   var toggle = document.querySelector('.nav-toggle');
