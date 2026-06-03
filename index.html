@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="page--inicio">
+  <!-- Canvas fijo: cubre toda la página de inicio -->
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
   <div class="page-loader" aria-hidden="true">
     <div class="page-loader__bar"></div>
   </div>
@@ -26,6 +29,7 @@
         <a href="tienda.html" class="main-nav__link">Tienda</a>
         <a href="contacto.html" class="main-nav__link">Contacto</a>
         <a href="sobre.html" class="main-nav__link">Sobre mí</a>
+        <a href="portafolio.html" class="main-nav__link">Portafolio</a>
       </nav>
       <div class="site-header__actions">
         <button type="button" class="cart-toggle" id="cart-toggle" aria-label="Abrir carrito">
@@ -42,8 +46,6 @@
 
       <!-- ——— Hero con shader animado ——— -->
       <section class="hero" aria-label="Introducción">
-        <canvas id="hero-canvas" aria-hidden="true"></canvas>
-
         <!-- Velo de oscurecimiento en bordes -->
         <div class="hero__veil" aria-hidden="true"></div>
 
@@ -246,6 +248,7 @@
       <p class="site-footer__copy">© 2026 · Alajuela, Costa Rica</p>
       <nav class="site-footer__links" aria-label="Enlaces">
         <a href="servicios.html">Servicios</a>
+        <a href="portafolio.html">Portafolio</a>
         <a href="contacto.html">Contacto</a>
         <a href="sobre.html">Sobre mí</a>
       </nav>
